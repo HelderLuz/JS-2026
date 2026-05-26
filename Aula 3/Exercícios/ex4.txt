@@ -1,0 +1,2 @@
+4. O que significa dizer que a linguagem JavaScript é case-sensitive?
+JavaScript diferencia letras maiúsculas de minúsculas. Exemplo, Numero é uma variável diferente de numero.
