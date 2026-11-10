@@ -10,3 +10,5 @@ for (const chave in carro) {
   // 'chave' é uma string: "marca", "modelo", "ano"
   console.log(`${chave}: ${carro[chave]}`);
 }
+
+

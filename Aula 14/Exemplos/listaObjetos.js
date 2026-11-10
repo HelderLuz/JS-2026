@@ -4,8 +4,10 @@ const turma = [
   { nome: "Carla", nota: 10, cidade: "Recife" },
 ];
 
+
+turma.push({ nome: 'José', nota: 9, cidade: "Porto Alegre" })
+
 // Acessando dados específicos
 for (const aluno of turma) {
-    aluno.nota *= 10;
     console.log(`O aluno ${aluno.nome} tirou nota ${aluno.nota}.`);
 }
