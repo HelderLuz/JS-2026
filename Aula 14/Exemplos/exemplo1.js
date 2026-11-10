@@ -6,4 +6,5 @@ const pessoa = {
   ativa: true,
 };
 
+pessoa.altura = 1.8
 console.log(pessoa)
