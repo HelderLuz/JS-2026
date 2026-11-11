@@ -13,10 +13,14 @@ const listaDeCompras = [
     { 'produto': 'teclado', 'precoUnitario': 199.99, 'quantidade': 35 }
 ]
 
+function moeda(preco) {
+    return preco.toFixed(2).replace('.',',')
+}
+
 function imprimirLista(listaDeCompras) {
     console.log('Lista de compras')
     for (const { produto, precoUnitario, quantidade } of listaDeCompras) {
-        console.log(`Produto: ${produto} Preço: R$${precoUnitario} Quantidade: ${quantidade} Preço total: R$${(precoUnitario * quantidade).toFixed(2)}`)
+        console.log(`Produto: ${produto} Preço: R$${moeda(precoUnitario)} Quantidade: ${quantidade} Preço total: R$${moeda(precoUnitario * quantidade)}`)
     }
     console.log()
 }
@@ -29,5 +33,5 @@ function totalCompra(listaDeCompras) {
     return total
 }
 imprimirLista(listaDeCompras)
-console.log(`Total da compra R$ ${totalCompra(listaDeCompras).toFixed(2).replace('.',',')}`)
+console.log(`Total da compra R$ ${moeda(totalCompra(listaDeCompras))}`)
 
