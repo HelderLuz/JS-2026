@@ -24,8 +24,13 @@ const departamentos = [
 
 let totalSalario = 0
 for (const departamento of departamentos) {
-    for (const funcionario of departamento.funcionarios) {
-        totalSalario += funcionario.salario
+    departamento.media = 0;
+    const { nome, funcionarios} = departamento
+    for (const funcionario of funcionarios) {
+        departamento.media += funcionario.salario
     }
+    departamento.media = departamento.media / funcionarios.length
+    // console.log(`Departamento: ${nome} Média: ${departamento.media}`)
+    console.log(departamento)
 }
 console.log(`Total dos salários: ${totalSalario}`)
